@@ -17,12 +17,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/lc123123/webpack.git"
+    "url": "git+https://github.com/lc123123/vue.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/lc123123/webpack/issues"
+    "url": "https://github.com/lc123123/vue/issues"
   },
   "homepage": "https://github.com/lc123123/webpack#readme"
 }
