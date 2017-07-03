@@ -1,0 +1,229 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.btn{
+    text-align: center;
+    display: inline-block;
+    width: 100px;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 5px;
+    color: #fff;
+    margin-left: 10px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+.clearfix{
+    content: "";
+    display: block;
+    clear: both;
+}
+#app{
+    background: #868168;
+    height: 100%;
+    width: 100%;
+}
+.ct{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
+#signInAndSignUp h1{
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 55px;
+    color: #5A5451
+}
+#signInAndSignUp label input{
+    display: none;
+
+}
+.signlogin-ct{
+    width: 300px;
+    box-shadow: 0 0 3px #ccc;
+    border-radius: 8px;
+    background: #665646
+}
+.sign-wrap-btn{
+    text-align: center;
+    padding: 10px 0;
+}
+.sign-wrap-btn label{
+    font-size: 18px;
+    padding: 10px;
+    margin: 20px;
+    cursor: pointer;
+    color: #ccc;
+}
+.sign-wrap-btn label.active{
+    border-bottom: 2px solid #ccc;
+    color: #fff
+}
+.formRow{
+    padding-left: 20px;
+    line-height: 40px;
+    font-size: 16px;
+    color: #ccc;
+}
+.formRow input{
+    width: 80%;
+    height: 35px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+}
+.formActions::after{
+    content: "";
+    display: block;
+    clear: both;
+}
+.formActions input{
+    float: right;
+    width: 65px;
+    height: 30px;
+    margin: 20px 20px 20px 0;
+    border: 3px solid #858066;
+    background: #fff;
+    border-radius: 50px;
+    cursor: pointer;
+}
+.formActions input:hover{
+    background: #858066;
+    transition: all .3s;
+}
+.btn-signup input{
+    background: #C2C0AC;
+}
+.sidebar{
+    float: left;
+    width: 20%;
+    background: #4e7a7d;
+    height: 100vh;
+    color: #fff;
+}
+.viewpart{
+    float: right;
+    width: 80%;
+    height: 100vh;
+    padding: 20px 50px;
+    background: #96ada7;
+}
+.sidebar h1{
+    width: 60%;
+    margin: 30px auto;
+    padding-bottom: 20px;
+    letter-spacing: 3px;
+    white-space: nowrap;
+    font-size: 35px;
+}
+.sidebar h3{
+    width: 60%;
+    margin: 10px auto;
+}
+.sidebar .catlist{
+    width: 60%;
+    margin: 0 auto;
+}
+.sidebar .catlist li{
+    margin: 10px auto;
+    height: 40px;
+    line-height: 40px;
+    font-size: 1rem;
+    cursor: pointer;
+    list-style: none;
+    padding-left: 20px;
+}
+.viewpart .newTask input{
+    padding: 5px 12px;
+    width: 300px;
+    height: 50px;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+.add{
+    background: #868168;
+}
+.add:hover{
+    background: #665646
+}
+.viewpart .user{
+    float: right;
+    height: 50px;
+    line-height: 50px;
+    color: #777;
+    font-size: 14px;
+}
+.viewpart .logout{
+    padding: 8px 10px;
+    background: transparent;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+    color: #777;
+    margin-left: 10px;
+}
+.viewpart .todos{
+    margin-top: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    overflow: hidden;
+}
+.viewpart .todos li{
+    padding: 10px 16px;
+    border-bottom: 1px solid #ccc;
+    position: relative;
+    height: 60px;
+    line-height: 60px;
+    list-style: none;
+}
+.viewpart .todos input{
+    width: 50px;
+    height: 30px;
+}
+.viewpart .todos li:last-child{
+    border-bottom: none;
+}
+.todos .delete{
+    color:#fff;
+    background: #878171;
+    width: 50px;
+    position: absolute;
+    right:16px;
+}
+.todos .time{
+    position: absolute;
+    right: 90px;
+    font-size: 12px;
+    line-height: 60px;
+}
+.delete:hover{
+    background: #8781BB;
+}
+
+.viewpart .todos li span:nth-child(2){
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.ok{
+    color: #6281a2;
+    padding-left: 10px;
+}
+.not-ok{
+    color: #a22e4d;
+    padding-left: 10px;
+}
+.logout:hover{
+    background: #6281a2;
+    color:#fff;
+}
+.catlist li:hover{
+    color: #ccc;
+    transition: transform 0.3s;
+    transform: translateX(20px);
+}
