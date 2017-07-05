@@ -20,11 +20,10 @@ var app = new Vue({
     todoList: [],
     currentUser: null,
   },
-  created: function(){
-    // onbeforeunload文档：https://developer.mozilla.org/zh-CN/docs/Web/API/Window/onbeforeunload
-    window.onbeforeunload = ()=>{
-      let dataString = JSON.stringify(this.todoList) // JSON 文档: https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/JSON
-      window.localStorage.setItem('myTodos', dataString) // 看文档https://developer.mozilla.org/zh-CN/docs/Web/API/Window/localStorage
+  created: function () {
+    window.onbeforeunload = () => {
+      let dataString = JSON.stringify(this.todoList)
+      window.localStorage.setItem('myTodos', dataString)
     }
 
     let oldDataString = window.localStorage.getItem('myTodos')
@@ -35,17 +34,17 @@ var app = new Vue({
 
   },
   methods: {
-    addTodo: function(){
+    addTodo: function () {
       this.todoList.push({
         title: this.newTodo,
         createdAt: new Date(),
-        done: false // 添加一个 done 属性
+        done: false
       })
       this.newTodo = ''
     },
-    removeTodo: function(todo){
-      let index = this.todoList.indexOf(todo) // Array.prototype.indexOf 是 ES 5 新加的 API
-      this.todoList.splice(index,1) // 不懂 splice？赶紧看 MDN 文档！
+    removeTodo: function (todo) {
+      let index = this.todoList.indexOf(todo)
+      this.todoList.splice(index, 1)
     },
     signUp: function () {
       let user = new AV.User();
@@ -67,10 +66,8 @@ var app = new Vue({
     getCurrentUser: function () {
       let current = AV.User.current()
       if (current) {
-        let {id, createdAt, attributes: {username}} = current
-        // 上面这句话看不懂就得看 MDN 文档了
-        // 我的《ES 6 新特性列表》里面有链接：https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment
-        return {id, username, createdAt} // 看文档：https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Operators/Object_initializer#ECMAScript_6%E6%96%B0%E6%A0%87%E8%AE%B0
+        let { id, createdAt, attributes: { username } } = current
+        return { id, username, createdAt }
       } else {
         return null
       }
