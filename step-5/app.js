@@ -124,8 +124,8 @@ var app = new Vue({
       this.saveOrUpdateTodos()
     },
     removeTodo: function (todo) {
-      let index = this.todoList.indexOf(todo) // Array.prototype.indexOf 是 ES 5 新加的 API
-      this.todoList.splice(index, 1) // 不懂 splice？赶紧看 MDN 文档！
+      let index = this.todoList.indexOf(todo)
+      this.todoList.splice(index, 1)
       this.saveOrUpdateTodos()
     },
     signUp: function () {
@@ -152,9 +152,7 @@ var app = new Vue({
       let current = AV.User.current()
       if (current) {
         let { id, createdAt, attributes: { username } } = current
-        // 上面这句话看不懂就得看 MDN 文档了
-        // 我的《ES 6 新特性列表》里面有链接：https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment
-        return { id, username, createdAt } // 看文档：https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Operators/Object_initializer#ECMAScript_6%E6%96%B0%E6%A0%87%E8%AE%B0
+        return { id, username, createdAt } 
       } else {
         return null
       }
